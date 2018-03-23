@@ -2,13 +2,35 @@
 <html>
   <head>
     <title>Golfstore</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+      <div id='header'>
+        <!-- Header Image Displays here -->
+      </div>
+      <div id='menu'>
+        <div id='navbar'>
+          <ul>
+            <li><a href="/items">Products</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id='container'>
+        <div id='content'>
+          <p class='notice'><%= flash[:notice] %></p>
+             <%= yield %>
+        </div>
+        <div id='first-column'>
+          <div class='loginbox'>
+            <h2 class='BoxHeaders'>Search Catalog</h2>
+          </div>
+        </div>
+      </div>
+      <div id='footer'>
+        <h6 class='footertext'>&copy; Online Golf Store &trade; 2016</h6>
+      </div>
   </body>
 </html>
