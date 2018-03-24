@@ -22,12 +22,19 @@
             <%= number_to_currency(item.price, :unit => '&pound;') %>
           </div>
           <div class='links'>
-            <%= link_to 'Edit', edit_item_path(item) %>
-            <%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+            <% if session[:login] == 1 %>
+              <%= link_to 'Edit', edit_item_path(item) %> |
+              <%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+          <% else %>
+          <a href='/cart'<% item.id %>Add to Cart</a><br><br>
+          <% end %>
+          
           </div>
       </td>
     </tr>
     <% end %>
 </table>
 
-<p><%= link_to 'New Item', new_item_path %></p>
+<% if session[:login] == 1%>
+  <p><%= link_to 'New Item', new_item_path %></p>
+<% end %>
