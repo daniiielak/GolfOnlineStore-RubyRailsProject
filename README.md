@@ -1,24 +1,18 @@
-# README
+# Golf E-Commerce Store 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Objective
+The objective of this project is to use the Ruby Rails framework to develop a golf e-commerce store website. The store allows the user to browse trough the product catalogue, add items to the cart and login functionalities.
 
-Things you may want to cover:
+## Functionalities:
+-Admin user login and logout (user database)
+-Product page with golf equipment information (item database)
+-Logged-in admin users can add, edit and remove products.
+-Search functionality of products
+-Shopping cart functionality
+-About and Contact us page
 
-* Ruby version
+## Page Screen
+Below is a screen of the golf store product page:
 
-* System dependencies
+![Image Golf Store Product Page](https://github.com/daniiielak/GolfOnlineStore-RubyRailsProject/blob/master/app/assets/images/golfstore-screen.png "Golf Online Store Product Page")
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
