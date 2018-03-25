@@ -2,8 +2,14 @@
 
 <h1>Product Catalog</h1>
 <br>
+
+<%= form_tag do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Products by Brand" %>
+  <%= submit_tag "Search" %>
+<% end %>
+<h3>Listing Products</h3>
+
 <table class='catalog'>
-  
   <% @items.each do |item| %>
     <tr>
       <td>
@@ -19,7 +25,7 @@
             <%= item.description %>
           </div>
           <div class='price'>
-            <%= number_to_currency(item.price, :unit => '&pound;') %>
+            <%= number_to_currency(item.price, :unit => '£') %>
           </div>
           <div class='links'>
             <% if session[:login] == 1 %>

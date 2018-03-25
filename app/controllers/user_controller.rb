@@ -5,7 +5,7 @@ class UserController < ApplicationController
   def admin_login
     session[:login] = 1
     session[:cart] = nil
-    session[:notice] = 'Admin Login Successful'
+    flash[:notice] = 'Admin Login Successful'
     redirect_to :controller => :items
   end
   

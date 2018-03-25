@@ -1,2 +1,5 @@
 class Item < ApplicationRecord
-end
+  def self.search(search)
+    where("brand LIKE?" ,"%#{search}%")
+  end
+end 

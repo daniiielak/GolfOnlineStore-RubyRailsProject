@@ -3,8 +3,14 @@ class ItemsController < ApplicationController
 
   # GET /items
   # GET /items.json
+  
   def index
     @items = Item.all
+    if params[:search]
+      @items = Item.search(params[:search]).order("created_at DESC")
+    else 
+      @items = Item.all.order("created_at DESC")
+    end
   end
 
   # GET /items/1
